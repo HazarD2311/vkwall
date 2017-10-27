@@ -1,10 +1,12 @@
 function getAccessToken(){
-	return '232cc7da1d40ce46291a30cdd3f862f04fe8834ad6770b3eee4fb3b1bf29224465a3b1cdc862a3dc27642';
+	return 'be16c1e9b17efe75ca0d276933420b928533e1bf130af69402ec6dd0d92d0ac2a3b63d57fe5742bb9ff41';
 }
 
 function getOwnerId() {
 	//return 15910946;
-	return 37606557;
+	return 53083705;
+	//return 1;
+	//return 37606557;
 }
 
 $('#btnWall').on('click', loadWall);
@@ -34,27 +36,23 @@ function loadWall(){
 }
 
 function showWall(wall) {
-	var html = 'ТЕСТ<br/>' + wall.length;
-
-	for (var i = 0; i < wall.length; i++) {
+	var html = '';
+	for (var i = 0; i < wall.length - 1; i++) {
 		var note = wall[i];
-
-		//console.log(note.text);
-
-		/*html += 
-		'<li>'
-			+ '<a target="_blank" href="https://vk.com/mrhazard?w=wall' + note.owner_id + '_' + note.id + '"/>'// + 'Перейти на запись' + '</a>'
-		 	+ '<img src="' + note.attachments[0].photo.photo_604 + '"/>'
-		+'</li>';*/
+		
 		html += 
 		'<li>'
 			+ '<div>'
-		 		+ '<h3> <a target="_blank" href="https://vk.com/tatyana_podakina?w=wall' + note.owner_id + '_' + note.id + '">' + 'Перейти на запись' + '</a> </h3>'
+		 		+ '<h4> <a target="_blank" href="https://vk.com/id' + note.owner_id + '?w=wall' + note.owner_id + '_' + note.id + '">' + 'Перейти на запись' + '</a> </h4>'
 		 		+ "<br/>"
 		 		+ note.text
-		 	+ '</div>'
-		 	+ '<img src="' + note.attachments[0].photo.photo_604 + '"/>'
-		+'</li>';
+		 	+ '</div>';
+
+		try {
+			html += '<img src="' + note.attachments[0].photo.photo_604 + '"/>';
+	 	} catch(Error) {}
+
+		html += '</li>';
 	}
 
 	$('ul').html(html);

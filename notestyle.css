@@ -1,0 +1,31 @@
+ul {
+	list-style: none;
+}
+
+li {
+	padding: 20px;
+	margin-right: 300px; 
+	margin-left: 300px;
+	margin-bottom: 60px;
+	text-align: center;
+	border: 20px;
+	box-shadow: 10px 10px 10px #2F3841;
+	background: #a0a0a4
+}
+
+img {
+	margin: 10px;
+	text-align: center;
+}
+
+a {
+
+	padding-top: 13px; 
+	text-decoration: none;
+	color: #000;
+}
+
+div {
+	text-align: left;
+	margin: 10px;
+}
