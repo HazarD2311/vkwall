@@ -25,7 +25,13 @@ a {
 	color: #000;
 }
 
-div {
+#noteDiv {
 	text-align: left;
 	margin: 10px;
 }
+
+#btnForward {
+	margin-top: 20px;
+	text-align: center;
+}
+
