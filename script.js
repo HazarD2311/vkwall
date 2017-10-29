@@ -1,5 +1,5 @@
 function getAccessToken(){
-	return 'e67c4659d4e7df2d12ff729436d3e8dca992d9972a47eea834c96ebf1f6d83b52b1ca630171a33df5b438';
+	return 'af1f65228e6a4d9474f4c31b86836e070aec2255e45b5b54102d626c8910514ad91f82f3c9d7dc770faf3';
 }
 
 //id человека, чью стену хотим посмотреть.
@@ -125,7 +125,7 @@ function forward() {
 	});
 }
 
-//плавный переход наверх при нажатии на кнопку Дальше
+//плавный переход наверх при нажатии на кнопку Далее/Назад
 $(function() {
 
  $(window).scroll(function() {
