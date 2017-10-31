@@ -1,5 +1,5 @@
 function getAccessToken(){
-	return 'af1f65228e6a4d9474f4c31b86836e070aec2255e45b5b54102d626c8910514ad91f82f3c9d7dc770faf3';
+	return 'ca9fa7ff923b5e6fdd084b1c5fb0adfdcea75a5be2810c874db34051235602c3ade9ce8b2a224a2d42f42';
 }
 
 //id человека, чью стену хотим посмотреть.
@@ -74,7 +74,7 @@ function sendRequest(method, params, getData) {
 
 function loadWall(){
 	console.log(counterNote.getInstance().getCounter());
-	sendRequest('wall.get', {count: getCountOfNotes, owner_id: getOwnerId, offset: counterNote.getInstance().getCounter()}, function getData(data){
+	sendRequest('wall.get', {count: getCountOfNotes, owner_id: getOwnerId, offset: counterNote.getInstance().getCounter(), expires_in: 'offline'}, function getData(data){
 		showWall(data.response.items);
 		console.log(data.response.items);
 	});
@@ -110,7 +110,7 @@ function back() {
 	console.log('back: ' + counterNote.getInstance().getCounter);
 	counterNote.getInstance().decreaseCounter();
 
-	sendRequest('wall.get', {count: getCountOfNotes, owner_id: getOwnerId, offset: counterNote.getInstance().getCounter()}, function getData(data){
+	sendRequest('wall.get', {count: getCountOfNotes, owner_id: getOwnerId, offset: counterNote.getInstance().getCounter(), expires_in: 'offline'}, function getData(data){
 		showWall(data.response.items);
 	});
 }
@@ -120,7 +120,7 @@ function forward() {
 	console.log('forward: ' + counterNote.getInstance().getCounter);
 	counterNote.getInstance().increaseCounter();
 
-	sendRequest('wall.get', {count: getCountOfNotes, owner_id: getOwnerId, offset: counterNote.getInstance().getCounter()}, function getData(data){
+	sendRequest('wall.get', {count: getCountOfNotes, owner_id: getOwnerId, offset: counterNote.getInstance().getCounter(), expires_in: 'offline'}, function getData(data){
 		showWall(data.response.items);
 	});
 }
