@@ -1,5 +1,5 @@
 function getAccessToken(){
-	return 'ca9fa7ff923b5e6fdd084b1c5fb0adfdcea75a5be2810c874db34051235602c3ade9ce8b2a224a2d42f42';
+	return '3195e9e93195e9e93115aff35931c30219331953195e9e9697cc67864e1f0c35fe7c074';
 }
 
 //id человека, чью стену хотим посмотреть.
@@ -7,6 +7,10 @@ function getOwnerId() {
 	//return 15910946;
 	return 53083705;
 	//return 1;
+}
+
+function getDomain() {
+	return 'extrawebdev';
 }
 
 //кол-во записей получаемых после запроса
